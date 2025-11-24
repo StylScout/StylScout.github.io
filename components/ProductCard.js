@@ -22,7 +22,7 @@ export const ProductCard = ({ product }) => {
 
   return html`
     <div className="bg-white rounded-xl shadow-soft hover:shadow-card transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col h-full group hover:-translate-y-1">
-      <!-- Header Section: Store & Price -->
+      
       <div className="bg-gradient-to-r from-fashion-50 to-white p-5 border-b border-gray-100 flex justify-between items-start">
         <div className="max-w-[60%]">
            <div className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">Store</div>
@@ -34,7 +34,7 @@ export const ProductCard = ({ product }) => {
         </div>
       </div>
 
-      <!-- Body Section: Details -->
+      
       <div className="p-5 flex flex-col flex-grow relative">
         <h3 className="text-lg font-bold text-gray-900 mb-3 leading-snug group-hover:text-fashion-accent transition-colors line-clamp-2">
           ${product.name}
@@ -54,7 +54,7 @@ export const ProductCard = ({ product }) => {
             </p>
         </div>
 
-        <!-- Actions -->
+        
         <div className="mt-auto space-y-3 pt-5 border-t border-gray-50">
           <a 
             href=${product.url} 

@@ -6,12 +6,12 @@ import { Trash2, ExternalLink, ArrowRight, Tag } from 'lucide-react';
 import { Button } from '../components/Button.js';
 import { html } from '../react-utils.js';
 
-// Helper component for Cart Items
+
 const CartItem = ({ item, removeFromCart }) => {
   return html`
     <li className="p-6 hover:bg-gray-50 transition-colors group">
       <div className="flex flex-col sm:flex-row gap-4">
-        <!-- Main Content -->
+        
         <div className="flex-1">
           <div className="flex justify-between items-start">
              <div>
@@ -37,7 +37,7 @@ const CartItem = ({ item, removeFromCart }) => {
           `}
         </div>
         
-        <!-- Actions Column -->
+        
         <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-4 min-w-[140px] border-t sm:border-t-0 sm:border-l border-gray-100 pt-4 sm:pt-0 sm:pl-6 mt-2 sm:mt-0">
           <p className="hidden sm:block text-xl font-bold text-gray-900">${item.price}</p>
           

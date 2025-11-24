@@ -21,7 +21,7 @@ export const Home = () => {
     setError(null);
     setSearched(true);
     setResults([]);
-    setSortBy('relevance'); // Reset sort on new search
+    setSortBy('relevance'); 
 
     try {
       const products = await searchClothes(query);
@@ -35,15 +35,9 @@ export const Home = () => {
 
   const clearSearch = () => {
     setQuery('');
-    if (!loading) {
-      // Optional: Clear results too if desired, or just clear input
-      // setResults([]); 
-      // setSearched(false);
-    }
   };
 
   const parsePrice = (priceStr) => {
-    // Remove currency symbols and non-numeric chars except dot
     const clean = priceStr.replace(/[^0-9.]/g, '');
     const num = parseFloat(clean);
     return isNaN(num) ? 0 : num;
@@ -64,9 +58,9 @@ export const Home = () => {
 
   return html`
     <div className="min-h-full pb-20">
-      <!-- Hero Section -->
+      
       <div className="bg-white border-b border-gray-100 relative overflow-hidden">
-        <!-- Background decorative elements -->
+        
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-30">
             <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[80%] bg-blue-50 rounded-full blur-3xl"></div>
             <div className="absolute top-[40%] -left-[10%] w-[40%] h-[60%] bg-indigo-50 rounded-full blur-3xl"></div>
@@ -123,7 +117,7 @@ export const Home = () => {
             </div>
           </form>
 
-          <!-- Quick Chips -->
+          
           <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm">
             <span className="text-gray-400 font-medium mr-2">Try searching:</span>
              ${[
@@ -143,7 +137,7 @@ export const Home = () => {
         </div>
       </div>
 
-      <!-- Results Section -->
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         ${loading && html`
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

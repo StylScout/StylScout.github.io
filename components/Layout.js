@@ -17,7 +17,7 @@ export const Layout = ({ children }) => {
       <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-gray-200/60 shadow-sm transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <!-- Logo -->
+            
             <div className="flex-shrink-0 flex items-center">
               <${Link} to="/" className="flex items-center gap-2.5 group">
                 <div className="w-9 h-9 bg-fashion-900 rounded-lg flex items-center justify-center text-white shadow-lg transition-transform group-hover:scale-105">
@@ -27,7 +27,7 @@ export const Layout = ({ children }) => {
               <//>
             </div>
 
-            <!-- Desktop Nav -->
+            
             <nav className="hidden md:flex space-x-8 items-center">
               <${Link} to="/" className=${`text-sm font-medium transition-colors ${location.pathname === '/' ? 'text-fashion-900' : 'text-gray-500 hover:text-fashion-900'}`}>
                 Search
@@ -63,7 +63,7 @@ export const Layout = ({ children }) => {
               `}
             </nav>
 
-            <!-- Mobile menu button -->
+            
             <div className="flex items-center md:hidden">
               ${isAuthenticated && html`
                 <${Link} to="/cart" className="mr-4 relative text-gray-500">
@@ -85,7 +85,7 @@ export const Layout = ({ children }) => {
           </div>
         </div>
 
-        <!-- Mobile Menu -->
+        
         ${isMobileMenuOpen && html`
           <div className="md:hidden bg-white border-b border-gray-200 absolute w-full shadow-xl">
             <div className="pt-2 pb-3 space-y-1 px-4">
