@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useAuth } from './AuthContext.js';
+import { html } from '../react-utils.js';
 
 const CartContext = createContext(undefined);
 
@@ -63,9 +64,9 @@ export const CartProvider = ({ children }) => {
     saveCartToStorage([]);
   };
 
-  return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, isInCart, clearCart }}>
-      {children}
-    </CartContext.Provider>
-  );
+  return html`
+    <${CartContext.Provider} value=${{ cart, addToCart, removeFromCart, isInCart, clearCart }}>
+      ${children}
+    <//>
+  `;
 };

@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { html } from '../react-utils.js';
 
 const AuthContext = createContext(undefined);
 
@@ -45,9 +46,9 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('stylescout_user');
   };
 
-  return (
-    <AuthContext.Provider value={{ user, login, logout, isAuthenticated: !!user }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return html`
+    <${AuthContext.Provider} value=${{ user, login, logout, isAuthenticated: !!user }}>
+      ${children}
+    <//>
+  `;
 };
